@@ -9,6 +9,7 @@ Custom script **errata-update.pl** is used for loading errata files from Interne
 
 ## INSTALLATION
 Put **cefs** folder into `/root` on spacewalk server and make scripts executable.  
+Define ***SPACEWALK_USER*** and ***SPACEWALK_PASS*** variables in **errata-update.pl**.  
 Set cron job:
 ```
 0 7 * * * /usr/bin/perl /root/cefs/errata-update.pl > /root/cefs/errata-update.log 2>&1

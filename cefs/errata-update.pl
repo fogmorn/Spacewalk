@@ -8,6 +8,12 @@ use strict;
 use warnings;
 use v5.16.3;
 
+# Данные для подключения к Spacewalk API.
+# Пользователь должен иметь административные права для публикации errata.
+# Без публикации - права необязательны.
+$ENV{SPACEWALK_USER} = '';
+$ENV{SPACEWALK_PASS} = '';
+
 my $work_dir = "/root/cefs";
 chomp (my $_curl = `which curl`);
 my $zflag = ""; # curl -z флаг для загрузки только обновлённого файла
